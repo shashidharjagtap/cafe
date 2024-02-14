@@ -9,4 +9,4 @@ FROM openjdk:11-jre-slim
 WORKDIR /app
 COPY --from=build /var/lib/jenkins/workspace/cicd/target/my-devops-project-1.0.0.jar /app/my-devops-project-1.0.0.jar
 
-CMD ["java", "-jar", "your-application.jar"]
+CMD ["java", "-jar", "my-devops-project-1.0.0.jar"]
