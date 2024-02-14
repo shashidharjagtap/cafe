@@ -7,5 +7,6 @@ RUN mvn clean package
 # Use an OpenJDK JRE as the base image
 FROM openjdk:11-jre-slim
 WORKDIR /app
-COPY --from=build /var/lib/jenkins/workspace/cicd/target/my-devops-project-1.0.0.jar.
+COPY --from=build /var/lib/jenkins/workspace/cicd/target/my-devops-project-1.0.0.jar /app/my-devops-project-1.0.0.jar
+
 CMD ["java", "-jar", "your-application.jar"]
